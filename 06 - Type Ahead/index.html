@@ -37,6 +37,7 @@
     }
 
     function displayMatches() {
+      console.log(this.value)// change in input value
       const matcharray = findMatches(this.value, cities);
       const html = matcharray.map(place => {
         const regex = new RegExp(this.value, 'gi');
@@ -49,6 +50,8 @@
       </li>`;
       }).join('');
       suggestions.innerHTML = html;
+
+
     }
 
     const searchInput = document.querySelector('.search');
